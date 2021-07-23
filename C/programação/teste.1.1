@@ -1,0 +1,73 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+
+#define QTD 5
+
+// Estrutura Estoque
+typedef struct
+{
+        int estoque[QTD];
+        int cod_produto[QTD];
+        int qtd_estoque[QTD];
+        float preco_unit;
+}Estoque;
+
+//Estrutura Pedidos
+typedef struct
+{
+        int cod_cliente;
+        int cod_produto_desejado;
+        int qtd_desejada;
+}Pedido;
+
+int main()
+{
+     Estoque estoque[QTD];
+     Pedido pedido[QTD];
+     int i;
+
+     printf("________Estoque________");
+     printf("\n\n");
+     do{
+                    printf("ENTRE COM O CODIGO DA MERCADORIA:");
+                    scanf("%d",&estoque[i].cod_produto);
+                    printf("\n\n");
+                    printf("ENTRE COM A QUANTIDADE EXISTENTE NO ESTOQUE:");
+                    scanf("%d",&estoque[i].qtd_estoque);
+                    printf("\n\n");
+                    printf("ENTRE COM O PRECO DO PRODUTO:");
+                    scanf("%f",&estoque[i].preco_unit);
+                    printf("\n\n");
+     }while (estoque[i].cod_produto != 0);
+
+     printf("________Pedidos________");
+     printf("\n\n");
+     do{
+                    printf("ENTRE COM O CODIGO DO CLIENTE:");
+                    scanf("%d",&pedido[i].cod_cliente);
+                    printf("\n\n");
+                    printf("ENTRE COM O PRODUTO DESEJADO:");
+                    scanf("%d",&pedido[i].cod_produto_desejado);
+                    printf("\n\n");
+                    printf("ENTRE COM A QUANTIDADE DESEJADA:");
+                    scanf("%d",&pedido[i].qtd_desejada;);
+                    printf("\n\n");
+     }while (pedido[i].cod_cliente != 0);
+
+     for(i=0;i<QTD;i++)
+     {
+
+                       if(pedido[i].cod_produto_desejado == estoque[i].estoque)
+                       {
+                       printf("PRODUTO VENDIDO;");
+                       estoque[i].estoque--;
+                       scanf("%d",estoque[i].estoque);
+                       }
+                                                      else
+                                                      {
+                                                      printf("NÃO TEMOS A MERCADORIA EM ESTOQUE SUFICIENTE: %d",pedido[i].cod_cliente);
+                                                      }
+     }
+     system("pause");
+}

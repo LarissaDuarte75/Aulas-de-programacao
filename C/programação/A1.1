@@ -1,0 +1,24 @@
+    #include<stdlib.h>
+    #include<stdio.h>
+    
+	main() {
+       int ANO;
+    printf("\nsaber se o ano é bissexto:\n ");
+    printf("\n digite o ano que deseja saber\n");
+    scanf("%d", &ANO);
+    
+	while (ANO != 0){
+    	if (ANO % 4 == 0){
+    		printf ("ano %d e bissexto", ANO);
+    		
+		}
+		else{
+			printf ("ano %d nao e bissexto", ANO);
+		}
+		system("pause");
+		system("cls");
+		printf("digite o ano");
+		scanf("%d",& ANO);
+	}
+}
+

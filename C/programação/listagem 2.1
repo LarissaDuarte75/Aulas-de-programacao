@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+
+int main(){
+	int COD[10], QTD[10], I=0; 
+	float VAL[10]; 
+	
+	
+	printf("Cadastro de Material\n\n");
+	printf("digite o código: ");
+	scanf("%d", &COD[I]);
+	
+	while (COD[I] != 0 && I < 5){
+		
+		printf("digite a quantidade: ");
+		scanf("&d", &QTD[I]);
+		printf("digite O valor: ");
+		scanf("&d", &VAL[I]);
+		
+		I++;
+		
+	  system("cls");
+	  
+	  printf("Cadastro de Material");
+	  printf("digite o codigo");
+	  scanf("&d", &COD[I]);
+	  
+	  system ("pause");
+	  
+	
+	}
+}
